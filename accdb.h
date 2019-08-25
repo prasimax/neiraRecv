@@ -1,10 +1,24 @@
 #ifndef ACCDB_H
 #define ACCDB_H
 
+/* for standard libary*/
 #include <iostream>
+#include <stdlib.h>
+#include <string>
+#include <fstream>
+#include <cstring>
+#include <stdio.h>
+#include <unistd.h>
+#include <vector>
+#include <typeinfo>
 
 /* for database connection */
-
+#include <mysql_connection.h>
+#include <cppconn/driver.h>
+#include <cppconn/exception.h>
+#include <cppconn/resultset.h>
+#include <cppconn/statement.h>
+#include <cppconn/prepared_statement.h>
 
 using namespace std;
 
@@ -19,6 +33,7 @@ public:
           string s_db,
           int s_mode);
     void testing_db();
+    void WriteToDB();
     ~accdb();
 
 private:
@@ -29,7 +44,7 @@ private:
     string db;
     int mode;
 
-    int WriteToDB();
+    
 
 
 };

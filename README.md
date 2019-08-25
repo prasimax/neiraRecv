@@ -19,6 +19,26 @@ CREATE TABLE IF NOT EXISTS sippoh (
 username : trumonuser
 password : trumonpassword
 port : 3306
-database : sippoh
+database : testrumon 
+table : sippoh
 ```
 # neiraRecv
+
+How to use 
+
+```bash
+NeiraRecv hostname port username password db
+```
+
+Add sql command for creating database 
+
+```sql
+
+CREATE TABLE `NeiraRecv` (
+`id` INT(11) NOT NULL AUTO_INCREMENT,
+`data` BLOB NOT NULL,
+`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (`id`)
+);
+
+```
